@@ -138,24 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- จบส่วน 3D Effect ---
 
 
-    // --- ส่วนที่ 1: จัดการ Overlay, Scroll Lock, และ AOS ---
-    const overlay = document.getElementById('clickToCloseOverlay');
-    const bodyElement = document.body;
-
-    if (overlay) {
-        bodyElement.classList.add('overlay-active');
-    }
-
-    // --- ฟังก์ชันสำหรับดึงคำนำหน้าประเภทกิจกรรม ---
-    function getActivityTypePrefix(type) {
-        switch (type) {
-            case 0: return 'Playing';
-            case 2: return 'Listening to';
-            case 3: return 'Watching';
-            default: return '';
-        }
-    }
-
     // --- ฟังก์ชันสำหรับดึงคำนำหน้าประเภทกิจกรรม ---
     function getActivityTypePrefix(type) {
         switch (type) {
@@ -193,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const profile = data?.ame;
 
                 if (!user || !profile) throw new Error("Invalid data structure from API");
-                
+
                 // เคลียร์ Timer เก่าทุกครั้งที่โหลดข้อมูลใหม่ เพื่อป้องกันการทำงานซ้อน
                 if (activityTimer) clearInterval(activityTimer);
 
@@ -211,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 const activity = profile.activities?.find(act => act.type === 0 || act.type === 2 || act.type === 3 || act.type === 4) || null;
-                
+
                 if (activity) {
                     // สร้าง Activity Text
                     if (activity.type === 4 && activity.state) {
@@ -232,12 +214,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                         activityAssetHtml = `<img src="${imageUrl}" alt="Activity Asset" class="discord-activity-asset">`;
                     }
-                    
+
                     // สร้างและเริ่ม Timestamp
                     if (activity.timestamps?.start) {
                         const startTime = parseInt(activity.timestamps.start, 10);
-                        timestampHtml = `<div class="discord-activity-timestamp"></div>`; 
-                        
+                        timestampHtml = `<div class="discord-activity-timestamp"></div>`;
+
                         activityTimer = setInterval(() => {
                             const timestampElement = document.querySelector('.discord-activity-timestamp');
                             if (timestampElement) {
@@ -248,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }, 1000);
                     }
                 }
-                
+
                 const cardHtml = `
                     <div class="discord-avatar-wrapper">
                         <img src="${avatarUrl}" alt="Avatar" class="discord-avatar">
@@ -267,8 +249,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // แสดงผลเวลาครั้งแรกทันที
                 if (activity?.timestamps?.start) {
                     const timestampElement = document.querySelector('.discord-activity-timestamp');
-                    if(timestampElement) {
-                         timestampElement.textContent = formatElapsedTime(parseInt(activity.timestamps.start, 10));
+                    if (timestampElement) {
+                        timestampElement.textContent = formatElapsedTime(parseInt(activity.timestamps.start, 10));
                     }
                 }
             })
@@ -309,25 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.warn("Ellipse switcher elements not found. Switcher disabled.");
     }
-
-    function hideOverlayAndEnablePage() {
-        if (overlay) {
-            overlay.classList.add('hidden');
-            overlay.removeEventListener('click', hideOverlayAndEnablePage);
-        }
-        if (bodyElement) {
-            bodyElement.classList.remove('overlay-active');
-        }
-        if (typeof AOS !== 'undefined') { AOS.init(); console.log('AOS Initialized.'); }
-        else { console.warn('AOS not found.'); }
-        if (typeof startMediaSwitcher === 'function') {
-            startMediaSwitcher();
-        }
-    }
-    if (overlay) {
-        overlay.addEventListener('click', hideOverlayAndEnablePage);
-    }
-
 
     // --- ส่วนจัดการ Typing Title Effect ---
     const siteTitles = [
@@ -374,5 +337,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     setTimeout(typeTitleEffect, 1500);
+
+    // --- เริ่ม AOS animation ทันทีเมื่อโหลดหน้าเว็บ ---
+    if (typeof AOS !== 'undefined') {
+        AOS.init();
+        console.log('AOS Initialized on page load.');
+    } else {
+        console.warn('AOS not found.');
+    }
 
 });

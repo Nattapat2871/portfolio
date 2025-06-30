@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Primary Meta Tags -->
     <title>Nattapat2871 Portfolio Website</title>
     <meta name="title" content="Nattapat2871 Portfolio Website" />
     <meta name="description"
         content="Discover the portfolio of Nattapat2871, featuring web development, design projects, and creative works. Explore skills and experiences in IT and digital innovation." />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://portfolio.nattapat2871.online/" />
     <meta property="og:title" content="Nattapat2871 Portfolio Website" />
@@ -19,17 +17,12 @@
     <meta property="og:image" content="https://portfolio.nattapat2871.online/media/meta-tags.png" />
 
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="http://portfolio.nattapat2871.online/" />
     <meta property="twitter:title" content="Nattapat2871 Portfolio Website" />
     <meta property="twitter:description"
         content="Discover the portfolio of Nattapat2871, featuring web development, design projects, and creative works. Explore skills and experiences in IT and digital innovation." />
     <meta property="og:image" content="https://portfolio.nattapat2871.online/media/meta-tags.png" />
-
-
-
-
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -41,11 +34,10 @@
 <body>
     <div class="click-overlay" id="clickToCloseOverlay">[ click ]</div>
 
-    <!--nav-->
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                <span>Nattapat.Portfolio
+                <span>Portfolio.Nattapat
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"> <a href="#">Home</a>
@@ -72,7 +64,6 @@
     </nav>
 
 
-    <!--Main section start-->
     <section>
         <div class="main-container" id="home" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
             <div class="image ellipse-switcher" id="media-ellipse" data-aos="zoom-out" data-aos-duration="900">
@@ -115,48 +106,22 @@
                             <i class="fa-brands fa-discord"></i>
                         </a>
                     </div>
-                    <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000">
-                        <button
-                            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });">Hire
-                            me</button>
+                    <div class="btn-group" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000">
+                        <button class="btn-main"
+                            onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });">
+                            Hire me
+                        </button>
+                        <a href="https://github.com/sponsors/Nattapat2871" target="_blank" rel="noopener noreferrer"
+                            class="btn-main sponsor-btn">
+                            <i class="fa-regular fa-heart"></i> Sponsor
+                        </a>
                     </div>
                 </div>
-                <div class="music-player" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="2000">
-                    <div class="player-wrapper">
-                        <img src="fa-music.png" alt="Album Art" class="album-art" id="albumArt">
-                        <div class="player-main">
-                            <div class="song-info">
-                                <p class="song-title thai-font" id="songTitle">Loading...</p>
-                            </div>
-                            <div class="progress-controls-container">
-                                <span class="current-time" id="currentTime">0:00</span>
-                                <input type="range" class="progress-bar" id="progressBar" value="0" min="0" max="100">
-                                <span class="total-duration" id="totalDuration">0:00</span>
-                                <div class="player-buttons">
-                                    <button id="prevBtn" aria-label="Previous Track"><i
-                                            class="fas fa-step-backward"></i></button>
-                                    <button id="playPauseBtn" aria-label="Play/Pause"><i
-                                            class="fas fa-play"></i></button>
-                                    <button id="nextBtn" aria-label="Next Track"><i
-                                            class="fas fa-step-forward"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="discord-profile-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="2000"></div>
             </div>
         </div>
     </section>
-    <div class="volume-control">
-        <i id="speaker-icon" class="fa-solid fa-volume-low"></i>
-        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
-    </div>
-    <audio id="audioPlayer"></audio>
-
-
-    <!--About section start-->
-
+    <div class="volume-control"></div>
     <section class="about" id="about">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
@@ -183,8 +148,6 @@
     </section>
 
 
-
-    <!--Skills section start-->
 
     <section class="skills" id="skills">
         <div class="content">
@@ -267,87 +230,109 @@
 
 
 
-    <!--My Service Section Start-->
-
-    <section class="services" id="services">
-        <div class="content">
-            <div class="title"><span data-aos="fade-up" data-aos-duration="1200">My Services</span></div>
-            <div class="boxes">
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-window-restore"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Web Devlopment
-                    </div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">is building and maintaining
-                        websites for the internet. It has two main parts that is Front-end and Back-end
-                        <br>website you see here is this one.
-                    </p>
+<section class="services" id="services">
+    <div class="content">
+        <div class="title"><span data-aos="fade-up" data-aos-duration="1200">My Services</span></div>
+        <div class="boxes">
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-window-restore"></i>
                 </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fas fa-solid fa-star"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">Rimuru gives you
-                        the primogem </div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">It is a Discord bot that will
-                        automatically log into the hoyolab website every day and will automatically send items into the
-                        game ( Supports Genshin impact Honkai starrail Zenless zone zero )</p>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">Web Devlopment
                 </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fas fa-solid fa-radio"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Jukebox Slime🎵
-                    </div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">A Discord music bot that uses
-                        play commands and has buttons and thumbnails. Beautiful UI. Sounds great and easy to use</p>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-tv"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="650">
-                        <p class="thai-font">อนิเมาะ</p>
-                    </div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="650">A Discord bot that collects new
-                        and trending anime recommended by Gemini's AI, and includes free streaming sources, whether it's
-                        old anime or anime coming out in the next few months, Which will be notified in the anime
-                        message</p>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-cube"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">Minecraft Server
-                    </div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">General server You can install
-                        mods and plugins to play with your friends using the host server and connect via ip
-                    <p class="mc-ip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="750">
-                        play.nattapat2871.online </p>
-                    </p>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-hourglass-start"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">😊</div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">my new work coming soon</p>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa-solid fa-hourglass-start"></i>
-                    </div>
-                    <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">😊</div>
-                    <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">my new work coming soon</p>
-                </div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">is building and maintaining
+                    websites for the internet. It has two main parts that is Front-end and Back-end
+                    <br>website you see here is this one.
+                </p>
+                <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">more...</a>
             </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-solid fa-star"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">Rimuru gives you
+                    the primogem </div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350">It is a Discord bot that will
+                    automatically log into the hoyolab website every day and will automatically send items into the
+                    game ( Supports Genshin impact Honkai starrail Zenless zone zero )</p>
+                <a href="https://github.com/Nattapat2871/Rimuru-gives-you-the-primogems" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="450">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-solid fa-radio"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">Jukebox Slime🎵
+                </div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">A Discord music bot that uses
+                    play commands and has buttons and thumbnails. Beautiful UI. Sounds great and easy to use</p>
+                <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">more...</a>
+            </div>
+            
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="650">
+                    <p class="thai-font">อนิเมาะ</p>
+                </div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="650">A Discord bot that collects new
+                    and trending anime recommended by Gemini's AI, and includes free streaming sources, whether it's
+                    old anime or anime coming out in the next few months, Which will be notified in the anime
+                    message</p>
+                <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="750">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">Minecraft Server
+                </div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="700">General server You can install
+                    mods and plugins to play with your friends using the host server and connect via ip
+                <p class="mc-ip" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="750">
+                    play.nattapat2871.online </p>
+                </p>
+                 <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">Rurina Ame</div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">Discord Bot intelligent AI assistant created to be more than just an ordinary bot. My core is powered by Google Gemini 1.5 Flash technology, giving me diverse capabilities and making me ready to be both an assistant and a friend to everyone</p>
+                 <a href="https://ame.nattapat2871.online/" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="950">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">Ame Api</div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">A custom-developed API for fetching real-time Discord user profile and status data. It provides a comprehensive range of information, with key capabilities including Profile Info Status & Activity</p>
+                 <a href="https://api.ame.nattapat2871.online/" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="950">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">😁</div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">New project coming soon...</p>
+                 <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="950">more...</a>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="topic" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">😁</div>
+                <p data-aos="fade-up" data-aos-duration="1500" data-aos-delay="850">New project coming soon...</p>
+                 <a href="#" class="more-button" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="950">more...</a>
+            </div>
+            
         </div>
-    </section>
+    </div>
+</section>
 
 
 
-    <!--Contact Me section start-->
     <section class="contact" id="contact">
         <div class="content">
             <div class="title" data-aos="fade-up" data-aos-duration="1500">
@@ -403,7 +388,7 @@
                     <div class="contact-links-tooltip"><a href="https://steamcommunity.com/id/nattapat2871/"
                             data-aos="fade-up" data-aos-duration="500" data-aos-delay="800"> <i
                                 class="fa-brands fa-steam"></i></a>
-                        <span class="contact-links-tooltip-text">steam id: 1416710361
+                        <span class="contact-links-tooltip-text">steam
                         </span>
                     </div>
                     <div class="contact-links-tooltip"><a href="https://www.twitch.tv/nattapat2871_" data-aos="fade-up"
@@ -427,32 +412,18 @@
                         <span class="contact-links-tooltip-text">NameMC
                         </span>
                     </div>
-                    <div class="contact-links-tooltip"><a
-                            href="https://www.roblox.com/th/users/3520621100/profile?friendshipSourceType=PlayerSearch"
-                            data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300"> <i class="roblox"></i></a>
-                        <span class="contact-links-tooltip-text">roblox
-                        </span>
-                    </div>
-                    <div class="contact-links-tooltip"><a href="https://osu.ppy.sh/users/31373831" data-aos="fade-up"
-                            data-aos-duration="500" data-aos-delay="1400"> <i class="osu"></i></a>
-                        <span class="contact-links-tooltip-text">osu
-                        </span>
-                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
 
 
-    <!--backtotop-->
     <a href="#home" id="backToTopBtn" title="backToTop">
         <img src="media\backtotop.png" alt="backToTop">
     </a>
 
 
 
-    <!--Footer Section start-->
     <footer>
         <div class="text">
             <span>Create By
